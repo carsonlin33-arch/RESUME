@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="zh-TW"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林哲暉 KOOK - 個人履歷</title>
+    <title>林哲暉 GARY - 個人履歷</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -612,26 +612,92 @@
             </div>
         </nav>
 
-        <!-- 個人資料 -->
-        <section id="profile" class="section glass-card profile-header">
-            <div class="profile-name">林哲暉</div>
-            <div class="profile-subtitle">KOOK | 電商人員、供應鏈管理人員</div>
-            <div style="font-size: 1.1rem; color: #b8c9e8; margin-bottom: 10px;">25歲 | 巨蟹座 | B型 | 台北市中山區</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>0983-529-527</span>
-                </div>
-                <div class="contact-item">
-                    <span>📧</span>
-                    <span><a href="mailto:carsonlin33@gmail.com">carsonlin33@gmail.com</a></span>
-                </div>
-                <div class="contact-item">
-                    <span>💼</span>
-                    <span>7~8年工作經驗</span>
-                </div>
+            <!-- 個人資料（包含 CSS 樣式與 HTML 結構） -->
+<style>
+/* 1. 將卡片改為彈性佈局 (Flexbox)，強制將內容左右排開 */
+#profile.profile-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+}
+
+/* 2. 左側占位空間：讓中間文字能完美在卡片正中央置中 */
+#profile .profile-spacer {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+/* 3. 中間文字區塊 */
+#profile .profile-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* 4. 右側大頭照區塊：設定為 140px 正方形 */
+#profile .profile-avatar {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+
+/* 5. 圖片設定：裁切成正圓形，並確保照片不拉高變形 */
+#profile .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 6. 手機版 (RWD) 適應：螢幕變小時間自動轉為上下排列，防止重疊 */
+@media (max-width: 768px) {
+    #profile.profile-header {
+        flex-direction: column-reverse !important;
+    }
+    #profile .profile-spacer {
+        display: none;
+    }
+    #profile .profile-avatar {
+        margin-bottom: 20px;
+        width: 120px;
+        height: 120px;
+    }
+}
+</style>
+
+<section id="profile" class="section glass-card profile-header">
+    <!-- 左側隱形占位區（維持中間文字置中） -->
+    <div class="profile-spacer"></div>
+
+    <!-- 中間文字內容區塊 -->
+    <div class="profile-text">
+        <div class="profile-name">林哲暉</div>
+        <div class="profile-subtitle">KOOK | 電商人員 | 供應鏈管理人員</div>
+        <div style="font-size: 1.1rem; color: #b8c9e8; margin-bottom: 10px;">25歲 | 巨蟹座 | B型 | 台北市中山區</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📱</span>
+                <span>0983-529-527</span>
             </div>
-        </section>
+            <div class="contact-item">
+                <span>📧</span>
+                <span><a href="mailto:carsonlin33@gmail.com">carsonlin33@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+                <span>💼</span>
+                <span>7~8年工作經驗</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 右側大頭照區塊 -->
+    <div class="profile-avatar">
+        <!-- ⚠️ 請記得把下面的 your-photo.jpg 替換成你的大頭照圖片檔名或網址 ⚠️ -->
+        <img src="images-2/HEAD.jpg" alt="林哲暉大頭照">
+    </div>
+</section>
 
         <!-- 關於我 -->
         <section id="about" class="section glass-card" style="padding: 40px;">
@@ -640,7 +706,8 @@
             <div style="margin-bottom: 30px;">
                 <h3 class="subsection-title">個人簡介</h3>
                 <p class="content-text">
-                    喜歡觀察人，並吸收他人的優點，做事情積極認真負責，樂於接觸學習新事物，喜歡跳脫舒適圈。在閒暇時間會看劇，總是能從劇中學到一些導演想傳達的內容，自學日文，喜歡拍照、拍穿搭，為了學拍照還買了台相機，平常會看一些流行時尚雜誌（GQ、VOGUE），學習美的事物，透過多看、多學、觀察，增長自己的見聞。
+                    1.	個性 ： 喜歡觀察人，並吸收他人的優點，不愛騙人，是個超級老實人，做事積極認真負責，樂於接觸學習新事物，跳脫舒適圈<br>
+                    2.	興趣(嗜好) ：喜歡閱讀，想把英文學好，學習AI、了解AI使用方式
                 </p>
             </div>
 
@@ -714,13 +781,13 @@
                         <li>人員招聘與團隊管理：培訓指導、排班配置、績效管理</li>
                         <li>商品陳列與銷售推廣：視覺陳列規劃、促銷活動策劃</li>
                         <li>顧客服務與客情維護：處理客訴、會員關係經營</li>
-                        <li>商圈經營與策略制定</li>
+                        <li>參與月度會議，回饋顧客需求與銷售狀況，並制定行銷與銷售策略</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="job-title">電商人員、供應鏈管理</div>
-                    <div class="company-name">保羅費樂國際有限公司</div>
+                    <div class="job-title">電商人員</div>
+                    <div class="company-name">保羅費樂國際股份有限公司</div>
                     <div class="job-period">2024年8月 - 現在</div>
                     <ul class="job-description">
                         <li>社群內容經營與互動（Instagram/短影音/直播）</li>
@@ -731,13 +798,32 @@
                         <li>線上即時客服處理</li>
                         <li>營運數據分析與策略調整</li>
                         <li>競品與市場趨勢追蹤</li>
-                        <li>進出口與關務管理</li>
-                        <li>物流與承攬商評估</li>
-                        <li>倉儲與庫存策略規劃</li>
-                        <li>商品成本與預算控制</li>
-                        <li>供應鏈數據追蹤與優化</li>
-                        <li>商品與進銷存控管</li>
                     </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-title">採購人員</div>
+                    <div class="company-name">保羅費樂國際股份有限公司</div>
+                    <div class="job-period">2024年8月 - 現在</div>
+                    <ul class="job-description">
+                        <li>品牌營運管理</li>
+                        <li>協調店鋪間商品調轉、進退貨</li>
+                        <li>商品銷售分析</li>
+                        <li>商品庫存管理與活動規劃</li>
+                        <li>商品下單數量填寫設定</li>
+                        <li>店鋪商品確認、巡視</li>
+                        <li>供應鏈、跨部門的聯絡對應</li>
+                        <li>專案參與(如供應鏈控管、快閃後勤等)</li>
+                        <li>商品價格、毛利的分析與控管</li>
+                        <li>協助財務部門完成對帳流程</li>
+                        <li>ERP系統管理</li>
+                        <li>進出口報關管理</li>
+
+                        <li>國內外品牌採購與供應鏈對接：<br>
+                            國外品牌對接： 負責與日本及海外品牌方（如：9090、OVERPRINT、ONE DROP、Merry Jenny）窗口溝通，落實採購下單、交期確認、驗收品管（QC）及帳款核對。<br>
+                            國內品牌合作： 協同國內知名潮流與設計品牌（如：29 studio、BLACK LABEL、filter017、KIKS、Equalnear、ORDINARY）之採購流程，確保商品供貨穩定，維持與廠商的良好關係。
+                        </li>                    
+                        </ul>
                 </div>
             </div>
         </section>
@@ -805,22 +891,22 @@
                                     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; width: 100%;">
 
                                         <div style="width: 20%; max-width: 250px; text-align: center;">
-                                            <img src="IMG_4150.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
+                                            <img src="images-2/IMG_4150.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
                                             <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;"></p>
                                         </div>
                                         
                                         <div style="width: 25%; max-width: 250px; text-align: center;">
-                                            <img src="IMG_4156.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
+                                            <img src="images-2/IMG_4156.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
                                             <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">棚拍成品照</p>
                                         </div>
                                     
                                         <div style="width: 25%; max-width: 250px; text-align: center;">
-                                            <img src="IMG_4154.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
+                                            <img src="images-2/IMG_4154.JPG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
                                             <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">棚拍成品照</p>
                                         </div>
                                         
                                         <div style="width: 20%; max-width: 250px; text-align: center;">
-                                            <img src="IMG_4140.PNG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
+                                            <img src="images-2/IMG_4140.PNG" alt="專案作品圖" style="width: 100%; height: auto; border-radius: 8px;">
                                             <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">社群媒體成品照</p>
                                         </div>
                                     </div>
@@ -875,9 +961,9 @@
                                     
                                         <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
 
-                                            <img src="TOYOOKA.PNG" alt="專案作品圖" style="width: 45%; max-width: 300px; height: auto; border-radius: 8px;">
+                                            <img src="images-2/IMG_4138.png" alt="專案作品圖" style="width: 45%; max-width: 300px; height: auto; border-radius: 8px;">
                                         
-                                            <img src="TOYOOKA2.PNG" alt="專案作品圖" style="width: 100%; max-width: 600px; object-fit: cover; border-radius: 8px;">
+                                            <img src="images-2/IMG_4149.png" alt="專案作品圖" style="width: 100%; max-width: 600px; object-fit: cover; border-radius: 8px;">
                                         
                                         </div>
                                         </div>
@@ -911,73 +997,68 @@
                         <div style="display: flex; justify-content: center; gap: 4%; margin-top: 20px; flex-wrap: wrap;">
 
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="蝦皮.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/蝦皮.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">蝦皮後台操作</p>    
                             </div>
                             
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="meta.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/meta.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">meta後台數據分析、投放廣告</p>    
                             </div>
                         
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="momo.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/momo.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">momo後台操作</p>    
                             </div>
                         
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="momoads.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/momoads.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">momo後台廣告</p>    
                             </div>
                         
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="pinkoi.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/pinkoi.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">pinkoi後台操作</p>    
                             </div> 
                         
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="shopify.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/shopify.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">shopify後台操作</p>    
                             </div>   
                         
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="shopify分析.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/shopify分析.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">shopify後台分析</p>    
                             </div>
                             
                             <div style="width: 48%; max-width: 400px; text-align: center; margin-bottom: 30px;">
-                                <img src="fill.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                <img src="images-2/fill.png" alt="電商" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                                 <p style="color: #ccc; font-size: 0.95rem; margin-top: 10px;">架設的官網</p>    
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-                <!-- 專案 3: 服飾店員經歷 -->
+                
+                <!-- 專案 3: ERP經歷 -->
                 <div class="timeline-item">
-                    <div class="job-title">服飾店員經歷</div>
-                    <div class="company-name">門市營運與內容行銷專案</div>
+                    <div class="job-title">ERP系統導入與轉換專案 (輔翼至鼎新) </div>
+                    <div class="company-name">專案負責人（主導與執行）</div>
                     <div style="margin-top: 15px;">
                         <h4 style="color: #e0e0e0; font-size: 1.1rem; margin-bottom: 10px;">工作內容與職責</h4>
                         <ul class="job-description">
-                            <li><strong>商品管理：</strong>負責店內商品陳列更換，依照新品上市、促銷活動與季節主題進行視覺陳列，提升購買意願</li>
-                            <li><strong>庫存維護：</strong>執行倉庫整理與盤點，確保商品數量準確、存放有序，並協助調貨與補貨</li>
-                            <li><strong>營運參與：</strong>參與月度會議，回饋顧客需求與銷售狀況，並配合店長制定行銷與銷售策略</li>
-                            <li><strong>商品選品：</strong>協助新品挑選與搭配建議，針對目標客群需求提供意見</li>
-                            <li><strong>顧客服務：</strong>提供專業穿搭建議與銷售服務，維持良好顧客關係，提升顧客回購率</li>
-                            <li><strong>行銷素材製作：</strong>負責商品 Model 拍攝與企劃，製作社群宣傳照片與短影片；進行影片拍攝與剪輯，增強品牌曝光度與社群互動</li>
+                            <li><strong>專案統籌與規劃：</strong>主導ERP系統轉換專案，負責將原系統全面無縫轉移至新ERP，涵蓋前期評估、時程規劃至實際上線</li>
+                            <li><strong>資料清洗與主檔建置：</strong>全面盤點並重整舊系統龐雜數據，執行「商品規格」的重新編碼與規格化，確保資料能正確對接新系統</li>
+                            <li><strong>成本與庫存移轉：</strong>精準核算並移轉「商品成本」與「期初庫存」等核心財務及營運數據，確保新舊系統轉換期間的數據一致性與準確</li>
+                            <li><strong>系統設定與測試驗證：</strong>根據公司進銷存流程，於鼎新系統中進行設定，並執行各項作業流程的模擬測試，排除上線潛在問題</li>
                         </ul>
                         <h4 style="color: #e0e0e0; font-size: 1.1rem; margin: 20px 0 10px 0;">工作成效</h4>
                         <ul class="job-description">
-                            <li>透過優化商品陳列與行銷素材，提升新品銷售率</li>
-                            <li>倉庫管理精準，降低調貨錯誤率</li>
-                            <li>參與商品選品及內容拍攝，協助提升門市與社群整體銷售表現與互動率</li>
+                            <li><strong>優化資料結構品質：</strong>透過資料重新梳理與規格化，徹底解決舊系統資料散亂與重複問題，大幅提升後續資料查詢的效率</li>
+                            <li><strong>提升庫存與成本精確度：</strong>成功建構鼎新 ERP 的進銷存架構，使公司的商品成本計算與庫存管理更加系統化、透明且精準</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
         <!-- 學歷 -->
@@ -1017,6 +1098,15 @@
                         <li>丙級電腦硬體裝修技術士</li>
                         <li>乙級數位電子技術士</li>
                         <li>乙級電腦硬體裝修技術士</li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-category">AI證照</div>
+                    <ul class="cert-list">
+                        <li>Introduction to Generative AI — Google Cloud Skills Boost</li>
+                        <li>Introduction to Responsible AI — Google Cloud Skills Boost</li>
+                        <li>Career Essentials in Generative AI — Microsoft and LinkedIn</li>
+                        <li>Artificial Intelligence Fundamentals — IBM SkillsBuild</li>
                     </ul>
                 </div>
             </div>
@@ -1061,14 +1151,13 @@
                 </div>
 
                 <div class="skill-category">
-                    <div class="skill-category-title">文書資料處理</div>
+                    <div class="skill-category-title">電腦文書資料處理</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Word</span>
                         <span class="skill-tag">PowerPoint</span>
                         <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">Excel lookup</span>
-                        <span class="skill-tag">樞紐分析</span>
                         <span class="skill-tag">文件收發與檔案管理</span>
+                        <span class="skill-tag">輔翼ERP系統、鼎新ERP系統</span>
                     </div>
                 </div>
 
